@@ -1,4 +1,4 @@
-# Create VPC
+# Create vpc
 # terraform aws create vpc
 resource "aws_vpc" "vpc" {
   cidr_block              = "${var.vpc-cidr}"
@@ -6,13 +6,13 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames    = true
 
   tags          = {
-    Name        = "felix-VPC"
+    Name        = "felix-vpc"
     Environment = "staging"
     Owner       = "EngineerFelix"
   }
 }
 
-# Create Internet Gateway and Attach it to VPC
+# Create Internet Gateway and Attach it to vpc
 # terraform aws create internet gateway
 resource "aws_internet_gateway" "internet-gateway" {
   vpc_id    = aws_vpc.vpc.id
