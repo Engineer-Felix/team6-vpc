@@ -5,8 +5,10 @@ resource "aws_vpc" "vpc" {
   instance_tenancy        = "default"
   enable_dns_hostnames    = true
 
-  tags      = {
-    Name    = "Test VPC"
+  tags          = {
+    Name        = "felix-VPC"
+    Environment = "staging"
+    Owner       = "EngineerFelix"
   }
 }
 
